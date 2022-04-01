@@ -6,45 +6,56 @@ namespace transCA
 {
     public class Destination
     {
-        private int _distance; //Distance in KM
-        public int Distance{ get { return _distance; } }
+        private List <int> _destinationInfo; //[Distance, Plane price, Train Price, Bus Price]
+        public List <int> DestinationInfo { get { return _destinationInfo; } }
 
         public Destination(string province)
         {
-            _distance = GetProvinceDistance(province);
+            GetProvinceInfo(province);
         }
 
-        private int GetProvinceDistance(string province)
+        private void GetProvinceInfo(string province)
         {
             switch(province)
             {
                 case "yukon":
-                    return 4000;
+                    _destinationInfo = new List<int> { 4000, 900, 450, 225};
+                    break;
                 case "british columbia":
-                    return 3400 ;
+                    _destinationInfo = new List<int> { 3400, 800, 400, 200 };
+                    break;
                 case "northwest territories":
-                    return 3100;
+                    _destinationInfo = new List<int> { 3100, 1000, 500, 250 };
+                    break;
                 case "alberta":
-                    return 2700;
+                    _destinationInfo = new List<int> { 2700, 700, 350, 175 };
+                    break;
                 case "saskatchewan":
-                    return 2200;
+                    _destinationInfo = new List<int> { 2200, 600, 300, 150 };
+                    break;
                 case "nunavut":
-                    return 2300;
+                    _destinationInfo = new List<int> { 2300, 1000, 500, 250 };
+                    break;
                 case "manitoba":
-                    return 1500;
+                    _destinationInfo = new List<int> { 1500, 500, 250, 125 };
+                    break;
                 case "quebec":
-                    return 760;
+                    _destinationInfo = new List<int> { 760, 300, 150, 75 };
+                    break;
                 case "newfoundland and labrador":
-                    return 2200;
+                    _destinationInfo = new List<int> { 2200, 1000, 500, 250 };
+                    break;
                 case "prince edwards island":
-                    return 1300;
+                    _destinationInfo = new List<int> { 1300, 700, 350, 175 };
+                    break;
                 case "new brunswick":
-                    return 1100;
+                    _destinationInfo = new List<int> { 1100, 600, 300, 150 };
+                    break;
                 case "nova scotia":
-                    return 2000;
+                    _destinationInfo = new List<int> { 2000, 900, 450, 225 };
+                    break;
                 default:
-                    return 0;
-                    
+                    throw new Exception();
             }     
         }
     }

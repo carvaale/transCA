@@ -12,10 +12,10 @@ namespace transCA
 
         public Plane(Destination destination, int passengers)
         {
-            _ticketPrice = 250;
+            _ticketPrice = destination.DestinationInfo[1];
             _speed = 800; //Speed of plane in KM/H
             _passengers = passengers;
-            _distance = destination.Distance;
+            _distance = destination.DestinationInfo[0];
             _total = GetTotal();
             _arrival = GetArrival();
         }
