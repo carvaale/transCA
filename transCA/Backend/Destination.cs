@@ -9,8 +9,6 @@ namespace transCA
         private int _distance; //Distance in KM
         public int Distance{ get { return _distance; } }
 
-        private int _distance; //Distance in KM
-        public int Distance { get { return _distance; } }
         private List<int> _destinationInfo; //[Distance, Plane price, Train Price, Bus Price]
         public List<int> DestinationInfo { get { return _destinationInfo; } }
 

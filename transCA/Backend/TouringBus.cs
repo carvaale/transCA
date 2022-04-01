@@ -4,7 +4,7 @@ using System.Text;
 
 namespace transCA.Backend
 {
-    internal class TouringBus
+    internal class TouringBus: Transportation
     {
 
 
