@@ -20,8 +20,11 @@ namespace transCA.Backend
         {
             return _ticketPrice * _passengers;
         }
-      
 
+        public override DateTime GetArrival()
+        {
+            return DateTime.Now.AddHours((_distance / _speed) + 10); // Total distance/ bus speed + the time taken for resting at the hotels
+        }
 
     }
 }
