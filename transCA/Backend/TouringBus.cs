@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace transCA.Backend
+namespace transCA
 {
-    internal class TouringBus: Transportation
+    public class TouringBus : Transportation
     {
         public TouringBus(Destination destinationTouringBus, int passengersTouringBus)
         {
@@ -12,9 +12,6 @@ namespace transCA.Backend
             _speed = 100;
             _passengers = passengersTouringBus;
             _distance = destinationTouringBus.DestinationInfo[0];
-            _total = GetTotal();
-            _arrival = GetArrival();
-
         }
         public override double GetTotal()
         {

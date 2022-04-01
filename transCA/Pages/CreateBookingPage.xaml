@@ -98,11 +98,11 @@
                 <StackLayout HorizontalOptions="Center" Orientation="Horizontal" >
                     <StackLayout Margin="0, 0, 50, 0">
                         <Label Text="Price" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center"/>
-                        <Label x:Name="Cost" Text="00.00" HorizontalOptions="Center"/>
+                        <Label x:Name="Cost" Text="" HorizontalOptions="Center"/>
                     </StackLayout>
                     <StackLayout>
                         <Label Text="Arrival" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center"/>
-                        <Label x:Name="Arrival" Text="00/00/00" HorizontalOptions="Center"/>
+                        <Label x:Name="Arrival" Text="" HorizontalOptions="Center"/>
                     </StackLayout>
                 </StackLayout>
                 

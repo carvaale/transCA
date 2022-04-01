@@ -17,6 +17,8 @@ namespace transCA
         public CreateBookingPage()
         {
             InitializeComponent();
+            PassengerPicker.IsEnabled = false;
+            TransportationPicker.IsEnabled = false;
         }
 
         private void DestinationPicker_SelectedIndexChanged(object sender, EventArgs e)
@@ -26,20 +28,38 @@ namespace transCA
             TrainCost.Text = $"${_dest.DestinationInfo[2]}";
             TourBusCost.Text = $"${_dest.DestinationInfo[3]}";
 
+            DestinationPicker.IsEnabled = false;
+            PassengerPicker.IsEnabled = true;
+        }
+
+        private void PassengerPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PassengerPicker.IsEnabled = false;
+            TransportationPicker.IsEnabled = true;
         }
 
         private void TransportationPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (TransportationPicker.SelectedItem.ToString() == "Plane")
             {
-                _transport = new Plane();
+                _transport = new Plane(_dest, Int32.Parse(PassengerPicker.SelectedItem.ToString()));
+                Cost.Text = $"${_transport.GetTotal()}";
+                Arrival.Text = _transport.GetArrival().ToString("MM/dd/yyyy");
+            }
+            if (TransportationPicker.SelectedItem.ToString() == "Train")
+            {
+                //_transport = new Train(_dest, (int)PassengerPicker.SelectedItem);
+                //Cost.Text = $"${_transport.GetTotal()}";
+                //Arrival.Text = _transport.GetArrival().ToString("MM/dd/yyyy");
+            }
+            if (TransportationPicker.SelectedItem.ToString() == "Tour Bus") 
+            {
+                _transport = new TouringBus(_dest, Int32.Parse(PassengerPicker.SelectedItem.ToString()));
+                Cost.Text = $"${_transport.GetTotal()}";
+                Arrival.Text = _transport.GetArrival().ToString("MM/dd/yyyy");
             }
 
-        }
-
-        private void PassengerPicker_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            TransportationPicker.IsEnabled = false;
         }
     }
 }

@@ -47,7 +47,6 @@ namespace transCA
                     _destinationInfo = new List<int> { 760, 300, 150, 75 };
                     break;
                 case "newfoundland and labrador":
-                    
                     _destinationInfo = new List<int> { 2200, 1000, 500, 250 };
                     break;
                 case "prince edwards island":
@@ -66,5 +65,4 @@ namespace transCA
     }
 
 }
-    }
-}
+
