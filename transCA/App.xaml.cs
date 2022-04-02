@@ -11,6 +11,10 @@ namespace transCA
             InitializeComponent();
 
             MainPage = new NavigationPage(new CreateBookingPage());
+
+            //MainPage = new NavigationPage(new Pages.AddFundsPage());
+
+           
         }
 
         protected override void OnStart()
