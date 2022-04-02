@@ -10,7 +10,7 @@ namespace transCA
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new CreateBookingPage());
         }
 
         protected override void OnStart()

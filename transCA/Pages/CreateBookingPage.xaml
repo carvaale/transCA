@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="transCA.CreateBookingPage"
+             NavigationPage.HasNavigationBar="True">
+    <NavigationPage.TitleView>
+        <Label Text="Create Booking" 
+               HorizontalOptions="Center" 
+               TextColor="White" 
+               FontSize="35" 
+               FontAttributes="Bold,Italic"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <!--Province picker-->
+                <Label Text="Provinces" HorizontalOptions="CenterAndExpand" FontSize="30" FontAttributes="Bold"/>
+                <Picker Title="Select Province"
+                    x:Name="DestinationPicker"
+                    SelectedIndexChanged="DestinationPicker_SelectedIndexChanged"
+                    Margin="60, 0, 60, 50">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Yukon</x:String>
+                            <x:String>British Columbia</x:String>
+                            <x:String>Northwest Territories</x:String>
+                            <x:String>Alberta</x:String>
+                            <x:String>Saskatchewan</x:String>
+                            <x:String>Nunavut</x:String>
+                            <x:String>Manitoba</x:String>
+                            <x:String>Quebec</x:String>
+                            <x:String>Newfoundland and Labrador</x:String>
+                            <x:String>Prince Edwards Island</x:String>
+                            <x:String>New Brunswick</x:String>
+                            <x:String>Nova Scotia</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                
+                <!--Passenger Textbox (Only Integers MAX 10)-->
+                <Label Text="Passengers" HorizontalOptions="CenterAndExpand" FontSize="30" FontAttributes="Bold"/>
+                <Picker Title="Select # of Passengers"
+                    x:Name="PassengerPicker"
+                    SelectedIndexChanged="PassengerPicker_SelectedIndexChanged"
+                    Margin="60, 0, 60, 50">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                            <x:String>5</x:String>
+                            <x:String>6</x:String>
+                            <x:String>7</x:String>
+                            <x:String>8</x:String>
+                            <x:String>9</x:String>
+                            <x:String>10</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <!--Transportation Information-->
+                <Label Text="Transportation" HorizontalOptions="CenterAndExpand" FontSize="30" FontAttributes="Bold"/>
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Orientation="Horizontal">
+                    <StackLayout>
+                        <Label Text="Plane" HorizontalOptions="Center" FontSize="Medium" FontAttributes="Bold"/>
+                        <Label Text="Fastest" HorizontalOptions="Center"/>
+                        <Label x:Name="PlaneCost" Text="" HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Margin="40, 0">
+                        <Label Text="Train" HorizontalOptions="Center" FontSize="Medium" FontAttributes="Bold"/>
+                        <Label Text="Intermediate" HorizontalOptions="Center"/>
+                        <Label x:Name="TrainCost" Text="" HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Tour Bus" HorizontalOptions="Center" FontSize="Medium" FontAttributes="Bold"/>
+                        <Label Text="Slowest" HorizontalOptions="Center"/>
+                        <Label x:Name="TourBusCost" Text="" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+                
+                <!--Transportation Information-->
+                <Picker Title="Select Transportation"
+                    x:Name="TransportationPicker"
+                    SelectedIndexChanged="TransportationPicker_SelectedIndexChanged"
+                    Margin="60, 0, 60, 50">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Plane</x:String>
+                            <x:String>Train</x:String>
+                            <x:String>Tour Bus</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <!--Estimate-->
+                <Label Text="Estimate" HorizontalOptions="Center" FontSize="30" FontAttributes="Bold" Margin="60, 0, 60, 0"/>
+                <StackLayout HorizontalOptions="Center" Orientation="Horizontal" >
+                    <StackLayout Margin="0, 0, 50, 0">
+                        <Label Text="Price" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                        <Label x:Name="Cost" Text="" HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Arrival" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                        <Label x:Name="Arrival" Text="" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+                
+                <!--Confirm-->
+                <Button Text="Confirm" FontAttributes="Bold,Italic" Margin="60, 20, 60, 0"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
