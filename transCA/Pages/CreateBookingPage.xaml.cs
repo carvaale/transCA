@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using transCA.Backend;
 
 namespace transCA
 {
@@ -23,7 +24,7 @@ namespace transCA
 
         private void DestinationPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _dest = new Destination(DestinationPicker.SelectedItem.ToString().ToLower());
+            _dest = new Destination(DestinationPicker.SelectedItem.ToString());
             PlaneCost.Text = $"${_dest.DestinationInfo[1]}";
             TrainCost.Text = $"${_dest.DestinationInfo[2]}";
             TourBusCost.Text = $"${_dest.DestinationInfo[3]}";

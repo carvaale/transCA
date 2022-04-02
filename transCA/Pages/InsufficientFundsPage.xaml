@@ -12,8 +12,8 @@
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Add Funds"/>
-            <Button Text="Cancel"/>
+            <Button Clicked="AddFunds_Clicked" Text="Add Funds"/>
+            <Button Clicked="Cancel_Clicked"  Text="Cancel"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

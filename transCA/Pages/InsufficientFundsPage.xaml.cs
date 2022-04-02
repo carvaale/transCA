@@ -16,5 +16,15 @@ namespace transCA.Pages
         {
             InitializeComponent();
         }
+
+        private void AddFunds_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AddFundsPage());
+        }
+
+        private void Cancel_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MainPage());
+        }
     }
 }
