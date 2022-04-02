@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using transCA.Pages;
 
 namespace transCA
 {
@@ -10,7 +11,7 @@ namespace transCA
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new CreateBookingPage());
+            MainPage = new NavigationPage(new InsufficientFundsPage());
         }
 
         protected override void OnStart()
