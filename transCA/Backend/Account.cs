@@ -5,8 +5,17 @@ namespace transCA
         //Name: Muhammad Choudhary
     {
 
-        //Storing name of user
-        private string _name;
+
+
+        //Storing user name of user
+        private string _userName;
+
+
+        private string _email;
+
+        private string _password;
+
+        
 
         //Storing user balance
         private double _balance;
@@ -43,8 +52,14 @@ namespace transCA
 
 
 
-        public Account()
+        public Account(string username, string email, string password)
         {
+
+            _userName = username;
+            _email = email;
+            _password = password;
+
+
         }
     }
 }

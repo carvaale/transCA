@@ -9,7 +9,7 @@ namespace transCA.Backend
 
         public Train(Destination destination, int passengers)
         {
-            _ticketPrice = destination.DestinationInfo[3];
+            _ticketPrice = destination.DestinationInfo[2];
             _speed = 250; //Speed of plane in KM/H
             _passengers = passengers;
             _distance = destination.DestinationInfo[0];
