@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using transCA.Backend;
+using transCA.Pages;
 
 namespace transCA
 {
@@ -15,27 +16,29 @@ namespace transCA
     {
         private Destination _dest; 
         private Transportation _transport;
-        public CreateBookingPage()
+        //private Account _userAccount;
+        public CreateBookingPage(/*Account user*/)
         {
             InitializeComponent();
-            PassengerPicker.IsEnabled = false;
-            TransportationPicker.IsEnabled = false;
-        }
-
-        private void DestinationPicker_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            _dest = new Destination(DestinationPicker.SelectedItem.ToString());
-            PlaneCost.Text = $"${_dest.DestinationInfo[1]}";
-            TrainCost.Text = $"${_dest.DestinationInfo[2]}";
-            TourBusCost.Text = $"${_dest.DestinationInfo[3]}";
-
+            //user = _userAccount;
             DestinationPicker.IsEnabled = false;
-            PassengerPicker.IsEnabled = true;
+            TransportationPicker.IsEnabled = false;
         }
 
         private void PassengerPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             PassengerPicker.IsEnabled = false;
+            DestinationPicker.IsEnabled = true;
+        }
+
+        private void DestinationPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _dest = new Destination(DestinationPicker.SelectedItem.ToString());
+            PlaneCost.Text = $"${_dest.DestinationInfo[1]}/ea";
+            TrainCost.Text = $"${_dest.DestinationInfo[2]}/ea";
+            TourBusCost.Text = $"${_dest.DestinationInfo[3]}/ea";
+
+            DestinationPicker.IsEnabled = false;
             TransportationPicker.IsEnabled = true;
         }
 
@@ -49,9 +52,9 @@ namespace transCA
             }
             if (TransportationPicker.SelectedItem.ToString() == "Train")
             {
-                //_transport = new Train(_dest, Int32.Parse(PassengerPicker.SelectedItem.ToString()));
-                //Cost.Text = $"${_transport.GetTotal()}";
-                //Arrival.Text = _transport.GetArrival().ToString("MM/dd/yyyy");
+                _transport = new Train(_dest, Int32.Parse(PassengerPicker.SelectedItem.ToString()));
+                Cost.Text = $"${_transport.GetTotal()}";
+                Arrival.Text = _transport.GetArrival().ToString("MM/dd/yyyy");
             }
             if (TransportationPicker.SelectedItem.ToString() == "Tour Bus") 
             {
@@ -65,7 +68,11 @@ namespace transCA
 
         private void Confirm_Clicked(object sender, EventArgs e)
         {
-            
+            //if (_userAccount.CheckBalance(123))
+            //    Navigation.PushAsync(new BookingConfirmedPage());
+
+            Navigation.PushAsync(new InsufficientFundsPage());
+               
         }
     }
 }

@@ -13,6 +13,28 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand">
+                <!--Passenger Textbox (Only Integers MAX 10)-->
+                <Label Text="Passengers" HorizontalOptions="CenterAndExpand" FontSize="30" FontAttributes="Bold"/>
+                <Picker Title="Select # of Passengers"
+                    x:Name="PassengerPicker"
+                    SelectedIndexChanged="PassengerPicker_SelectedIndexChanged"
+                    Margin="60, 0, 60, 50">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                            <x:String>5</x:String>
+                            <x:String>6</x:String>
+                            <x:String>7</x:String>
+                            <x:String>8</x:String>
+                            <x:String>9</x:String>
+                            <x:String>10</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                
                 <!--Province picker-->
                 <Label Text="Provinces" HorizontalOptions="CenterAndExpand" FontSize="30" FontAttributes="Bold"/>
                 <Picker Title="Select Province"
@@ -33,28 +55,6 @@
                             <x:String>Prince Edwards Island</x:String>
                             <x:String>New Brunswick</x:String>
                             <x:String>Nova Scotia</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
-                
-                <!--Passenger Textbox (Only Integers MAX 10)-->
-                <Label Text="Passengers" HorizontalOptions="CenterAndExpand" FontSize="30" FontAttributes="Bold"/>
-                <Picker Title="Select # of Passengers"
-                    x:Name="PassengerPicker"
-                    SelectedIndexChanged="PassengerPicker_SelectedIndexChanged"
-                    Margin="60, 0, 60, 50">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>1</x:String>
-                            <x:String>2</x:String>
-                            <x:String>3</x:String>
-                            <x:String>4</x:String>
-                            <x:String>5</x:String>
-                            <x:String>6</x:String>
-                            <x:String>7</x:String>
-                            <x:String>8</x:String>
-                            <x:String>9</x:String>
-                            <x:String>10</x:String>
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>

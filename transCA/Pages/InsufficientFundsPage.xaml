@@ -5,15 +5,15 @@
              NavigationPage.HasNavigationBar="True">
     <NavigationPage.TitleView>
         <Label Text="Create Booking" 
-               HorizontalOptions="Center" 
+               HorizontalOptions="CenterAndExpand" 
                TextColor="White" 
                FontSize="35" 
                FontAttributes="Bold,Italic"/>
     </NavigationPage.TitleView>
     <ContentPage.Content>
-        <StackLayout>
-            <Button Clicked="AddFunds_Clicked" Text="Add Funds"/>
-            <Button Clicked="Cancel_Clicked"  Text="Cancel"/>
+        <StackLayout VerticalOptions="Center">
+            <Button Clicked="AddFunds_Clicked" Text="Add Funds" FontSize="30" FontAttributes="Bold" Margin="60, 20" Padding="0, 70"/>
+            <Button Clicked="Cancel_Clicked"  Text="Cancel" FontSize="30" FontAttributes="Bold"  Margin="60, 20" Padding="0, 70"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
