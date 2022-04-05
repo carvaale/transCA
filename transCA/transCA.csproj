@@ -11,12 +11,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\qr_ticket.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\qr_ticket.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Pages\BookingConfirmedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Pages\CreateBookingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\InsufficientFundsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

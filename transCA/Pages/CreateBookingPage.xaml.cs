@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using transCA.Backend;
 
 namespace transCA
 {
@@ -23,7 +24,7 @@ namespace transCA
 
         private void DestinationPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _dest = new Destination(DestinationPicker.SelectedItem.ToString().ToLower());
+            _dest = new Destination(DestinationPicker.SelectedItem.ToString());
             PlaneCost.Text = $"${_dest.DestinationInfo[1]}";
             TrainCost.Text = $"${_dest.DestinationInfo[2]}";
             TourBusCost.Text = $"${_dest.DestinationInfo[3]}";
@@ -48,7 +49,7 @@ namespace transCA
             }
             if (TransportationPicker.SelectedItem.ToString() == "Train")
             {
-                //_transport = new Train(_dest, (int)PassengerPicker.SelectedItem);
+                //_transport = new Train(_dest, Int32.Parse(PassengerPicker.SelectedItem.ToString()));
                 //Cost.Text = $"${_transport.GetTotal()}";
                 //Arrival.Text = _transport.GetArrival().ToString("MM/dd/yyyy");
             }
@@ -60,6 +61,11 @@ namespace transCA
             }
 
             TransportationPicker.IsEnabled = false;
+        }
+
+        private void Confirm_Clicked(object sender, EventArgs e)
+        {
+            
         }
     }
 }

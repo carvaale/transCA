@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="transCA.Pages.BookingConfirmedPage"
+             NavigationPage.HasNavigationBar="True">
+    <NavigationPage.TitleView>
+        <Label Text="Confirmation" 
+               HorizontalOptions="Center" 
+               TextColor="White" 
+               FontSize="35" 
+               FontAttributes="Bold,Italic"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label x:Name="Confirm"  Text="" HorizontalTextAlignment="Center"  FontSize="20" Margin="0 40 30 40"/>
+            <Image x:Name="TicketQR" WidthRequest="75" HeightRequest="300"/>
+            <Label Text="Thank you for using TransCA." HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold,Italic" Margin="30 0 0 0"/>
+            <Button Text="Return to Home Page" Clicked="Home_Clicked" FontAttributes="Bold,Italic" Margin="60, 20, 60, 0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

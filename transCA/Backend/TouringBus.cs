@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace transCA
+namespace transCA.Backend
 {
     public class TouringBus : Transportation
     {
         public TouringBus(Destination destinationTouringBus, int passengersTouringBus)
         {
             _ticketPrice = destinationTouringBus.DestinationInfo[3];
-            _speed = 100;
+            _speed = 75;
             _passengers = passengersTouringBus;
             _distance = destinationTouringBus.DestinationInfo[0];
         }
