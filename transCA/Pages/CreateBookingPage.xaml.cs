@@ -16,11 +16,12 @@ namespace transCA
     {
         private Destination _dest; 
         private Transportation _transport;
-        //private Account _userAccount;
-        public CreateBookingPage(/*Account user*/)
+        private Account _userAccount;
+
+        public CreateBookingPage(Account user)
         {
             InitializeComponent();
-            //user = _userAccount;
+            _userAccount = user;
             DestinationPicker.IsEnabled = false;
             TransportationPicker.IsEnabled = false;
         }
@@ -68,10 +69,10 @@ namespace transCA
 
         private void Confirm_Clicked(object sender, EventArgs e)
         {
-            //if (_userAccount.CheckBalance(123))
-            //    Navigation.PushAsync(new BookingConfirmedPage());
+            if (_userAccount.CheckBalance(double.Parse(Cost.Text)))
+                Navigation.PushAsync(new BookingConfirmedPage(_userAccount));
 
-            Navigation.PushAsync(new InsufficientFundsPage());
+            Navigation.PushAsync(new InsufficientFundsPage(_userAccount));
                
         }
     }

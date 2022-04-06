@@ -12,9 +12,12 @@ namespace transCA.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BookingConfirmedPage : ContentPage
     {
-        public BookingConfirmedPage()
+        private Account _user;
+
+        public BookingConfirmedPage(Account user)
         {
             InitializeComponent();
+            _user = user;
             Confirmation();
             TicketQR.Source = ImageSource.FromResource($"transCA.Images.qr_ticket.png", typeof(BookingConfirmedPage));
         }
@@ -26,7 +29,7 @@ namespace transCA.Pages
 
         private void Home_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MainPage());
+            Navigation.PushAsync(new MainPage(_user));
         }
     }
 }

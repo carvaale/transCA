@@ -14,27 +14,17 @@ namespace transCA.Pages
 
         void LoginButton_Clicked(System.Object sender, System.EventArgs e)
         {
-
-
             //Check if the password entered is the same as confirmed password
             if (PasswordEntry.Text != ConfirmPasswordEntry.Text) {
 
                 DisplayAlert("Paswword Error", "Entered Password Does Not Match","OK");
 
+            } else
+            {
+                Account account = new Account(UserNameEntry.Text, EmailEntry.Text, PasswordEntry.Text);
+
+                Navigation.PushAsync(new MainPage(account));
             }
-
-
-
-
-            Account account = new Account(UserNameEntry.Text, EmailEntry.Text, PasswordEntry.Text );
-
-
-
-
-            Navigation.PushAsync(new MainPage(account));
-
-
-
 
 
         }

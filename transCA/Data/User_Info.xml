@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Accounts>
+	<user id="0">
+		<name>xxx</name>
+		<email>xxx</email>
+		<password>xxx</password>
+		<balance>0</balance>
+		<bookings>
+			<trip id="0">
+				<destination>xxx</destination>
+				<transportation>xxx</transportation>
+				<passengers>0</passengers>
+				<arrival>00/00/0000</arrival>
+			</trip>
+		</bookings>
+	</user>
+</Accounts>

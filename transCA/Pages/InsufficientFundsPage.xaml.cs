@@ -12,9 +12,11 @@ namespace transCA.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class InsufficientFundsPage : ContentPage
     {
-        public InsufficientFundsPage()
+        private Account _user;
+        public InsufficientFundsPage(Account user)
         {
             InitializeComponent();
+            _user = user;
         }
 
         private void AddFunds_Clicked(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace transCA.Pages
 
         private void Cancel_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MainPage());
+            Navigation.PushAsync(new MainPage(_user));
         }
     }
 }
