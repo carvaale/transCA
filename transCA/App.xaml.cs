@@ -11,7 +11,7 @@ namespace transCA
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new SignInPage());
         }
 
         protected override void OnStart()

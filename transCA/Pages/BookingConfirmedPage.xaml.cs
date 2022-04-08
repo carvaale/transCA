@@ -12,13 +12,10 @@ namespace transCA.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BookingConfirmedPage : ContentPage
     {
-        private Booking _trip;
-
         public BookingConfirmedPage()
         {
             InitializeComponent();
             Confirmation();
-            _trip = ExistingBooking._currentBookings[0];
             TicketQR.Source = ImageSource.FromResource($"transCA.Images.qr_ticket.png", typeof(BookingConfirmedPage));
         }
 

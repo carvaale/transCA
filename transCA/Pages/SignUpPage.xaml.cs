@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using transCA.Backend;
 
 using Xamarin.Forms;
 
@@ -21,7 +22,7 @@ namespace transCA.Pages
 
             } else
             {
-                new Account(UserNameEntry.Text, EmailEntry.Text, PasswordEntry.Text);
+                Account.CurrentUser = new Account(UserNameEntry.Text, EmailEntry.Text, PasswordEntry.Text);
 
                 Navigation.PushAsync(new MainPage());
             }

@@ -7,31 +7,16 @@
 
 
 
-<ContentPage.Content>
+    <ContentPage.Content>
 
 
-    <StackLayout Orientation="Vertical" VerticalOptions="Start">
+        <StackLayout Orientation="Vertical" VerticalOptions="Start">
 
-        <Label Text="Add Funds" HorizontalTextAlignment="Center" FontSize="50" FontAttributes="Bold"/>
-        <Entry Placeholder="Enter Funds" Margin="0,70,0,0" FontSize = "Title" x:Name="InputFunds"/>
+            <Label Text="Add Funds" HorizontalTextAlignment="Center" FontSize="50" FontAttributes="Bold"/>
+            <Entry Placeholder="Enter Funds" Margin="0,70,0,0" FontSize = "Title" x:Name="InputFunds" MaxLength="5"/>
 
-        <Button Text="Confirm" FontSize="Title" x:Name="ConfirmFunds" Clicked="ConfirmFunds_Clicked"/>
+            <Button Text="Confirm" FontSize="Title" x:Name="ConfirmFunds" Clicked="ConfirmFunds_Clicked"/>
 
-
-
-
-
-    </StackLayout>
-
-
-
-
-
-
-
-
-</ContentPage.Content>
-
-
-
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

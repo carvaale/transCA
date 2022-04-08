@@ -9,9 +9,16 @@ namespace transCA
         private string _password;
         private int _balance;
 
+        public static Account CurrentUser { get; set; }
+
+
 
         public Account(string username, string email, string password)
         {
+            _userName = username;
+            _email = email; 
+            _password = password;
+            _balance = 0;
         }
 
         //Adding funds
@@ -25,7 +32,8 @@ namespace transCA
         //otherwise true
         //Also deducts the funds from balance
         public bool CheckBalance(int sum) {
-            if (sum >= _balance) {
+            if (sum <= _balance) 
+            {
                 _balance = _balance - sum;
                 return true;
             }

@@ -12,11 +12,9 @@ namespace transCA.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class InsufficientFundsPage : ContentPage
     {
-        private Account _user;
         public InsufficientFundsPage()
         {
             InitializeComponent();
-            _user = Account.CurrentUser;
         }
 
         private void AddFunds_Clicked(object sender, EventArgs e)

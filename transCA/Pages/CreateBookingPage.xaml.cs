@@ -16,7 +16,6 @@ namespace transCA
     {
         private Destination _dest; 
         private Transportation _transport;
-        private Account _userAccount;
         private Booking _bookInfo;
         public CreateBookingPage()
         {
@@ -68,19 +67,20 @@ namespace transCA
 
         private void Confirm_Clicked(object sender, EventArgs e)
         {
-            if (Account.CheckBalance(Int32.Parse(Cost.Text)))
+            if (Account.CurrentUser.CheckBalance(Int32.Parse(Cost.Text)))
             {
-                _bookInfo.DestinationRequired = _dest;
-                _bookInfo.TransportationDetails = _transport;
-                _bookInfo.ProvinceName = DestinationPicker.SelectedItem.ToString();
+                //_bookInfo.DestinationRequired = _dest;
+                //_bookInfo.TransportationDetails = _transport;
+                //_bookInfo.ProvinceName = DestinationPicker.SelectedItem.ToString();
 
-                ExistingBooking.AddBooking(_bookInfo);
+                //ExistingBooking.AddBooking(_bookInfo);
 
                 Navigation.PushAsync(new BookingConfirmedPage());
             }
-
-            Navigation.PushAsync(new InsufficientFundsPage());
-               
+            else
+            {
+                Navigation.PushAsync(new InsufficientFundsPage());
+            }
         }
     }
 }
