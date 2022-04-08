@@ -9,5 +9,6 @@ namespace transCA.Backend
         public Destination DestinationRequired { get;  set; }
         public Transportation TransportationDetails { get; set; }
         public string ProvinceName { get; set; }
+
     }
 }

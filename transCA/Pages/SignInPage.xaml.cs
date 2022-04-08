@@ -14,10 +14,12 @@ namespace transCA.Pages
 
         void LoginButton_Clicked(System.Object sender, System.EventArgs e)
         {
+            Navigation.PushAsync(new MainPage());
         }
 
         void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
         {
+            Navigation.PushAsync(new SignUpPage());
         }
     }
 }

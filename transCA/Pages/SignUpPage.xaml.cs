@@ -21,9 +21,9 @@ namespace transCA.Pages
 
             } else
             {
-                Account account = new Account(UserNameEntry.Text, EmailEntry.Text, PasswordEntry.Text);
+                new Account(UserNameEntry.Text, EmailEntry.Text, PasswordEntry.Text);
 
-                Navigation.PushAsync(new MainPage(account));
+                Navigation.PushAsync(new MainPage());
             }
 
 

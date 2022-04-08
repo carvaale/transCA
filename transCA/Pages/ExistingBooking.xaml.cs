@@ -12,22 +12,16 @@ namespace transCA.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ExistingBooking : ContentPage
     {
-        private Booking _book;
-        public ExistingBooking(Booking book )
+        public static List <Booking> _currentBookings;
+
+        public ExistingBooking()
         {
             InitializeComponent();
-            _book = book;
-            BookingDetails();
-
         }
-        private void BookingDetails()
+
+        public static void AddBooking(Booking booking)
         {
-            DestinationLabel.Text += $"{_book.ProvinceName}";
-            // DepartureTimeLabel += $"{}";
-            ArrivalTimeLabel.Text += $"{_book.TransportationDetails.GetArrival()}";
-            //TripTimelabel.Text += $"{_book.DestinationRequired._distance / _book.DestinationRequired._speed}";
-            PriceLabel.Text += $"{_book.TransportationDetails.GetTotal()}";
-           
+            _currentBookings.Add(booking);  
         }
     }
 }

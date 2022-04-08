@@ -18,10 +18,9 @@ namespace transCA
         private Transportation _transport;
         private Account _userAccount;
         private Booking _bookInfo;
-        public CreateBookingPage(Account user)
+        public CreateBookingPage()
         {
             InitializeComponent();
-            _userAccount = user;
             DestinationPicker.IsEnabled = false;
             TransportationPicker.IsEnabled = false;
         }
@@ -48,19 +47,19 @@ namespace transCA
             if (TransportationPicker.SelectedItem.ToString() == "Plane")
             {
                 _transport = new Plane(_dest, Int32.Parse(PassengerPicker.SelectedItem.ToString()));
-                Cost.Text = $"${_transport.GetTotal()}";
+                Cost.Text = $"{_transport.GetTotal()}";
                 Arrival.Text = _transport.GetArrival().ToString("MM/dd/yyyy");
             }
             if (TransportationPicker.SelectedItem.ToString() == "Train")
             {
                 _transport = new Train(_dest, Int32.Parse(PassengerPicker.SelectedItem.ToString()));
-                Cost.Text = $"${_transport.GetTotal()}";
+                Cost.Text = $"{_transport.GetTotal()}";
                 Arrival.Text = _transport.GetArrival().ToString("MM/dd/yyyy");
             }
             if (TransportationPicker.SelectedItem.ToString() == "Tour Bus") 
             {
                 _transport = new TouringBus(_dest, Int32.Parse(PassengerPicker.SelectedItem.ToString()));
-                Cost.Text = $"${_transport.GetTotal()}";
+                Cost.Text = $"{_transport.GetTotal()}";
                 Arrival.Text = _transport.GetArrival().ToString("MM/dd/yyyy");
             }
 
@@ -69,18 +68,18 @@ namespace transCA
 
         private void Confirm_Clicked(object sender, EventArgs e)
         {
-            if (_userAccount.CheckBalance(double.Parse(Cost.Text)))
+            if (Account.CheckBalance(Int32.Parse(Cost.Text)))
             {
                 _bookInfo.DestinationRequired = _dest;
                 _bookInfo.TransportationDetails = _transport;
                 _bookInfo.ProvinceName = DestinationPicker.SelectedItem.ToString();
-                Navigation.PushAsync(new BookingConfirmedPage(_userAccount,_bookInfo));
-               // Destination dest = _dest;
-               // Transportation transport = _transport;
-               // new ExistingBooking(dest, transport, DestinationPicker.SelectedItem.ToString());
+
+                ExistingBooking.AddBooking(_bookInfo);
+
+                Navigation.PushAsync(new BookingConfirmedPage());
             }
 
-            Navigation.PushAsync(new InsufficientFundsPage(_userAccount));
+            Navigation.PushAsync(new InsufficientFundsPage());
                
         }
     }

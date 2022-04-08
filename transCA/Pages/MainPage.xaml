@@ -14,7 +14,7 @@
         <Button x:Name="ExistingBookingButton" Text="Existing Booking" Clicked="ExistingBookingButton_Clicked"/>
         <Button x:Name="CreateBookingButton" Text="Create Booking" Clicked="CreateBookingButton_Clicked"/>
         <Button x:Name="AddFundsButton" Text=" Add Funds" Clicked="AddFundsButton_Clicked"/>
-        <Button x:Name="LogOutButton" Text="Log Out"/>
+        <Button x:Name="LogOutButton" Text="Log Out" Clicked="LogOutButton_Clicked"/>
 
     </StackLayout>
 

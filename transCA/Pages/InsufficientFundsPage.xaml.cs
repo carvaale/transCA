@@ -13,10 +13,10 @@ namespace transCA.Pages
     public partial class InsufficientFundsPage : ContentPage
     {
         private Account _user;
-        public InsufficientFundsPage(Account user)
+        public InsufficientFundsPage()
         {
             InitializeComponent();
-            _user = user;
+            _user = Account.CurrentUser;
         }
 
         private void AddFunds_Clicked(object sender, EventArgs e)
@@ -26,7 +26,7 @@ namespace transCA.Pages
 
         private void Cancel_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MainPage(_user));
+            Navigation.PushAsync(new MainPage());
         }
     }
 }
