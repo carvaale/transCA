@@ -12,16 +12,21 @@ namespace transCA.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ExistingBooking : ContentPage
     {
-        public static List <Booking> _currentBookings;
+        private static List <Booking> _currentBookings = new List<Booking>();
+
 
         public ExistingBooking()
         {
             InitializeComponent();
+            BookingList.ItemsSource = _currentBookings;
+
         }
+
 
         public static void AddBooking(Booking booking)
         {
-            _currentBookings.Add(booking);  
+            _currentBookings.Add(booking);
         }
+
     }
 }

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="transCA.CreateBookingPage"
              NavigationPage.HasNavigationBar="True">
+   
     <NavigationPage.TitleView>
         <Label Text="Create Booking" 
                HorizontalOptions="Center" 
@@ -11,7 +12,8 @@
                FontAttributes="Bold,Italic"/>
     </NavigationPage.TitleView>
     <ContentPage.Content>
-        <StackLayout>
+        <ScrollView>
+            <StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand">
                 <!--Passenger Textbox (Only Integers MAX 10)-->
                 <Label Text="Passengers" HorizontalOptions="CenterAndExpand" FontSize="30" FontAttributes="Bold"/>
@@ -110,5 +112,7 @@
                 <Button Text="Confirm" Clicked="Confirm_Clicked" FontAttributes="Bold,Italic" Margin="60, 20, 60, 0"/>
             </StackLayout>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
+  
 </ContentPage>

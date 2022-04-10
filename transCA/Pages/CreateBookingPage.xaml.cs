@@ -22,6 +22,7 @@ namespace transCA
             InitializeComponent();
             DestinationPicker.IsEnabled = false;
             TransportationPicker.IsEnabled = false;
+
         }
 
         private void PassengerPicker_SelectedIndexChanged(object sender, EventArgs e)
@@ -69,11 +70,11 @@ namespace transCA
         {
             if (Account.CurrentUser.CheckBalance(Int32.Parse(Cost.Text)))
             {
-                //_bookInfo.DestinationRequired = _dest;
-                //_bookInfo.TransportationDetails = _transport;
-                //_bookInfo.ProvinceName = DestinationPicker.SelectedItem.ToString();
-
-                //ExistingBooking.AddBooking(_bookInfo);
+                _bookInfo = new Booking(_dest, _transport, DestinationPicker.SelectedItem.ToString());
+                /*  _bookInfo.DestinationRequired = _dest;
+                  _bookInfo.TransportationDetails = _transport;
+                  _bookInfo.ProvinceName = DestinationPicker.SelectedItem.ToString(); */
+                  ExistingBooking.AddBooking(_bookInfo);
 
                 Navigation.PushAsync(new BookingConfirmedPage());
             }
