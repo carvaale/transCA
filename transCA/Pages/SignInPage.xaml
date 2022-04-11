@@ -10,8 +10,8 @@
            HorizontalOptions="Center"
            />
 
-    <Entry x:Name="EmailEntry" Placeholder="Email"/>
-    <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" Margin="0,0,0,20"/>
+    <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email"/>
+    <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" Margin="0,0,0,20" Keyboard="Default"/>
     <Button x:Name="LoginButton" Text="Login" FontSize="20" Clicked="LoginButton_Clicked"/>
 
     <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Margin="0,20,0,20">
