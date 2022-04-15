@@ -8,16 +8,13 @@
     >
 
     <ScrollView>
-        <StackLayout Padding="20" VerticalOptions="StartAndExpand">
-            <Label Text="Sign Up"
-            FontSize="50"
-            HorizontalOptions="Center"
-            />
-            <Entry x:Name="UserNameEntry" Placeholder="User Name" Margin="0,20,20,20" Keyboard="Default"/>
-            <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email"/>
-            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" Margin="0,20,0,20" Keyboard="Default"/>
-            <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm Password" IsPassword="True" Margin="0,0,0,20" Keyboard="Default"/>
-            <Button x:Name="LoginButton" Text="Sign Up" FontSize="20" Clicked="LoginButton_Clicked"/>
+        <StackLayout Padding="20" Style="{StaticResource stackStyle}">
+            <Label Text="Sign Up" Style="{StaticResource labelStyle}"/>
+            <Entry x:Name="UserNameEntry" Placeholder="User Name" Keyboard="Default" Style="{StaticResource entryStyle}"/>
+            <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email" Style="{StaticResource entryStyle}"/>
+            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" Keyboard="Default" Style="{StaticResource entryStyle}"/>
+            <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm Password" IsPassword="True" Keyboard="Default" Style="{StaticResource entryStyle}"/>
+            <Button x:Name="LoginButton" Text="Sign Up" Clicked="LoginButton_Clicked" Style="{StaticResource buttonStyle}"/>
 
 
         </StackLayout>

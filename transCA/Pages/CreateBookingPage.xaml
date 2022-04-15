@@ -5,22 +5,18 @@
              NavigationPage.HasNavigationBar="True">
    
     <NavigationPage.TitleView>
-        <Label Text="Create Booking" 
-               HorizontalOptions="Center" 
-               TextColor="White" 
-               FontSize="35" 
-               FontAttributes="Bold,Italic"/>
+        <Label Text="Create Booking" Style="{StaticResource bannerStyle}"/>
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-            <StackLayout VerticalOptions="CenterAndExpand">
+                <StackLayout Style="{StaticResource stackStyle}">
                 <!--Passenger Textbox (Only Integers MAX 10)-->
-                <Label Text="Passengers" HorizontalOptions="CenterAndExpand" FontSize="30" FontAttributes="Bold"/>
+                <Label Text="Passengers" Style="{StaticResource labelStyle}"/>
                 <Picker Title="Select # of Passengers"
                     x:Name="PassengerPicker"
                     SelectedIndexChanged="PassengerPicker_SelectedIndexChanged"
-                    Margin="60, 0, 60, 50">
+                    Style="{StaticResource pickerStyle}">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>1</x:String>
@@ -38,11 +34,11 @@
                 </Picker>
                 
                 <!--Province picker-->
-                <Label Text="Provinces" HorizontalOptions="CenterAndExpand" FontSize="30" FontAttributes="Bold"/>
+                <Label Text="Provinces" Style="{StaticResource labelStyle}"/>
                 <Picker Title="Select Province"
                     x:Name="DestinationPicker"
                     SelectedIndexChanged="DestinationPicker_SelectedIndexChanged"
-                    Margin="60, 0, 60, 50">
+                    Style="{StaticResource pickerStyle}">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Yukon</x:String>
@@ -62,7 +58,7 @@
                 </Picker>
 
                 <!--Transportation Information-->
-                <Label Text="Transportation" HorizontalOptions="CenterAndExpand" FontSize="30" FontAttributes="Bold"/>
+                <Label Text="Transportation" Style="{StaticResource labelStyle}"/>
                 <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Orientation="Horizontal">
                     <StackLayout>
                         <Label Text="Plane" HorizontalOptions="Center" FontSize="Medium" FontAttributes="Bold"/>
@@ -85,7 +81,7 @@
                 <Picker Title="Select Transportation"
                     x:Name="TransportationPicker"
                     SelectedIndexChanged="TransportationPicker_SelectedIndexChanged"
-                    Margin="60, 0, 60, 50">
+                    Style="{StaticResource pickerStyle}">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Plane</x:String>
@@ -96,7 +92,7 @@
                 </Picker>
 
                 <!--Estimate-->
-                <Label Text="Estimate" HorizontalOptions="Center" FontSize="30" FontAttributes="Bold" Margin="60, 0, 60, 0"/>
+                <Label Text="Estimate" Style="{StaticResource labelStyle}"/>
                 <StackLayout HorizontalOptions="Center" Orientation="Horizontal" >
                     <StackLayout Margin="0, 0, 50, 0">
                         <Label Text="Price" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center"/>
@@ -109,7 +105,7 @@
                 </StackLayout>
                 
                 <!--Confirm-->
-                <Button Text="Confirm" Clicked="Confirm_Clicked" FontAttributes="Bold,Italic" Margin="60, 20, 60, 0"/>
+                <Button Text="Confirm" Clicked="Confirm_Clicked" Style="{StaticResource buttonStyle}"/>
             </StackLayout>
         </StackLayout>
         </ScrollView>

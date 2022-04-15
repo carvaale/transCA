@@ -4,17 +4,13 @@
              x:Class="transCA.MainPage"
              NavigationPage.HasBackButton="False">
     <NavigationPage.TitleView>
-        <Label Text="TransCA" 
-               HorizontalOptions="Center" 
-               TextColor="White" 
-               FontSize="35" 
-               FontAttributes="Bold,Italic"/>
+        <Label Text="TransCA" Style="{StaticResource bannerStyle}"/>
     </NavigationPage.TitleView>
-    <StackLayout Orientation="Vertical" VerticalOptions="Center">
-        <Button x:Name="ExistingBookingButton" Text="Existing Booking" Clicked="ExistingBookingButton_Clicked"/>
-        <Button x:Name="CreateBookingButton" Text="Create Booking" Clicked="CreateBookingButton_Clicked"/>
-        <Button x:Name="AddFundsButton" Text=" Add Funds" Clicked="AddFundsButton_Clicked"/>
-        <Button x:Name="LogOutButton" Text="Log Out" Clicked="LogOutButton_Clicked"/>
+    <StackLayout Style="{StaticResource stackStyle}">
+        <Button x:Name="ExistingBookingButton" Text="Existing Booking" Clicked="ExistingBookingButton_Clicked" Style="{StaticResource buttonStyle}"/>
+        <Button x:Name="CreateBookingButton" Text="Create Booking" Clicked="CreateBookingButton_Clicked" Style="{StaticResource buttonStyle}"/>
+        <Button x:Name="AddFundsButton" Text=" Add Funds" Clicked="AddFundsButton_Clicked" Style="{StaticResource buttonStyle}"/>
+        <Button x:Name="LogOutButton" Text="Log Out" Clicked="LogOutButton_Clicked" Style="{StaticResource buttonStyle}"/>
 
     </StackLayout>
 

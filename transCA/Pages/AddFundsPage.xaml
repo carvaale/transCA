@@ -4,18 +4,18 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="transCA.Pages.AddFundsPage"
     NavigationPage.HasNavigationBar="True">
-
-
-
+    <NavigationPage.TitleView>
+        <Label Text="Add Funds" Style="{StaticResource bannerStyle}"/>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
 
 
-        <StackLayout Orientation="Vertical" VerticalOptions="Start">
+        <StackLayout Style="{StaticResource stackStyle}">
 
-            <Label Text="Add Funds" HorizontalTextAlignment="Center" FontSize="50" FontAttributes="Bold"/>
-            <Entry Placeholder="Enter Funds" Margin="0,70,0,0" FontSize = "Title" x:Name="InputFunds" MaxLength="5" Keyboard="Numeric"/>
+            <Label Text="Add Funds" Style="{StaticResource labelStyle}"/>
+            <Entry Placeholder="Enter Funds" x:Name="InputFunds" MaxLength="5" Keyboard="Numeric" Style="{StaticResource entryStyle}"/>
 
-            <Button Text="Confirm" FontSize="Title" x:Name="ConfirmFunds" Clicked="ConfirmFunds_Clicked"/>
+            <Button Text="Confirm" x:Name="ConfirmFunds" Clicked="ConfirmFunds_Clicked" Style="{StaticResource buttonStyle}"/>
 
         </StackLayout>
     </ContentPage.Content>

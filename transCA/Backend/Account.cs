@@ -43,5 +43,10 @@ namespace transCA
             }
 
         }
+
+        public string GetUserName()
+        {
+            return _userName;
+        }
     }
 }

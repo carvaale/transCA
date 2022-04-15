@@ -5,11 +5,7 @@
              NavigationPage.HasNavigationBar="True"
              NavigationPage.HasBackButton="False">
     <NavigationPage.TitleView>
-        <Label Text="Create Booking" 
-               HorizontalOptions="CenterAndExpand" 
-               TextColor="White" 
-               FontSize="35" 
-               FontAttributes="Bold,Italic"/>
+        <Label Text="Create Booking" Style="{StaticResource bannerStyle}"/>
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center">

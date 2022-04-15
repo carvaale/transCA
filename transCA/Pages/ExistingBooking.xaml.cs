@@ -22,10 +22,14 @@ namespace transCA.Pages
 
         }
 
-
         public static void AddBooking(Booking booking)
         {
             _currentBookings.Add(booking);
+        }
+        
+        public static Booking GetRecentBooking()
+        {
+            return _currentBookings[0];
         }
 
     }

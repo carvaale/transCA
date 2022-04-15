@@ -3,6 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="transCA.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="FontAttributes" Value="Bold, Italic"/>
+                <Setter Property="Margin" Value="60, 20, 60, 0"/>
+            </Style>
 
+            <Style x:Key="pickerStyle" TargetType="Picker">
+                <Setter Property="Margin" Value="60, 0, 60, 50"/>
+            </Style>
+
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="Margin" Value="60, 0, 60, 0"/>
+            </Style>
+
+            <Style x:Key="entryStyle" TargetType="Entry">
+                <Setter Property="Margin" Value="60, 0, 60, 0"/>
+            </Style>
+
+            <Style x:Key="stackStyle" TargetType="StackLayout">
+                <Setter Property="Orientation" Value="Vertical"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="BackgroundColor" Value="LimeGreen"/>
+            </Style>
+
+            <Style x:Key="bannerStyle" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="End"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="35"/>
+                <Setter Property="FontAttributes" Value="Bold, Italic"/>
+                <Setter Property="Margin" Value="0, 0, 40, 0"/>
+            </Style>
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

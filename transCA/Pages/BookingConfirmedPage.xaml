@@ -5,18 +5,14 @@
              NavigationPage.HasNavigationBar="True"
              NavigationPage.HasBackButton="False">
     <NavigationPage.TitleView>
-        <Label Text="Confirmation" 
-               HorizontalOptions="Center" 
-               TextColor="White" 
-               FontSize="35" 
-               FontAttributes="Bold,Italic"/>
+        <Label Text="Confirmation" Style="{StaticResource bannerStyle}"/>
     </NavigationPage.TitleView>
     <ContentPage.Content>
-        <StackLayout VerticalOptions="CenterAndExpand">
-            <Label x:Name="Confirm"  Text="" HorizontalTextAlignment="Center" FontSize="20" Margin="30, 0"/>
+        <StackLayout Style="{StaticResource stackStyle}">
+            <Label x:Name="Confirm"  Text="" FontSize="Body" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="60, 0"/>
             <Image x:Name="TicketQR" WidthRequest="75" HeightRequest="300"/>
             <Label Text="Thank you for using TransCA." HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold,Italic" Margin="30, 0"/>
-            <Button Text="Return to Home Page" Clicked="Home_Clicked" FontAttributes="Bold,Italic" Margin="60, 20, 60, 0"/>
+            <Button Text="Return to Home Page" Clicked="Home_Clicked" Style="{StaticResource buttonStyle}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
