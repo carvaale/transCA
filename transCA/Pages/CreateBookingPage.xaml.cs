@@ -70,13 +70,13 @@ namespace transCA
         {
             if (Account.CurrentUser.CheckBalance(Int32.Parse(Cost.Text)))
             {
-                _bookInfo = new Booking(_dest, _transport, DestinationPicker.SelectedItem.ToString());
+                _bookInfo = new Booking(_dest, _transport, DestinationPicker.SelectedItem.ToString(), TransportationPicker.SelectedItem.ToString());
                 /*  _bookInfo.DestinationRequired = _dest;
                   _bookInfo.TransportationDetails = _transport;
                   _bookInfo.ProvinceName = DestinationPicker.SelectedItem.ToString(); */
                   ExistingBooking.AddBooking(_bookInfo);
 
-                Navigation.PushAsync(new BookingConfirmedPage());
+                Navigation.PushAsync(new BookingConfirmedPage(_bookInfo));
             }
             else
             {

@@ -32,5 +32,10 @@ namespace transCA.Pages
             return _currentBookings[0];
         }
 
+        private void BookingList_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var booking = BookingList.SelectedItem as Booking;
+            Navigation.PushAsync(new BookingConfirmedPage(booking));
+        }
     }
 }

@@ -9,12 +9,14 @@ namespace transCA.Backend
         public Destination DestinationRequired { get;  set; }
         public Transportation TransportationDetails { get; set; }
         public string ProvinceName { get; set; }
+        public string TransportWay { get; set; }
 
-        public Booking(Destination d, Transportation t, string p)
+        public Booking(Destination d, Transportation t, string p,string o)
         {
             DestinationRequired = d;
             TransportationDetails = t;
             ProvinceName = p;
+            TransportWay = o;
 
         }
 
@@ -22,7 +24,7 @@ namespace transCA.Backend
         {
             get
             {
-                return $"{TransportationDetails.GetArrival()}" + "\t" + $"{TransportationDetails.GetTotal()}";
+                return $"{TransportationDetails.GetArrival()}" + "\t" + $"{TransportationDetails.GetTotal()} $";
             }
         }
     }
