@@ -20,11 +20,21 @@ namespace transCA.Pages
 
                 DisplayAlert("Paswword Error", "Entered Password Does Not Match","OK");
 
-            } else
-            {
-                Account.CurrentUser = new Account(UserNameEntry.Text, EmailEntry.Text, PasswordEntry.Text);
+            }
+            if (AccountRepository.AccountExists(EmailEntry.Text)) {
+                DisplayAlert("Error", "Email is already used", "OK");
+                return;
 
-                Navigation.PushAsync(new MainPage());
+            }
+            else
+            {
+                Account.CurrentUser = new Account(UserNameEntry.Text, PasswordEntry.Text);
+
+                var account = new Account(UserNameEntry.Text, EmailEntry.Text, PasswordEntry.Text);
+
+                AccountRepository.AddAccount(account);
+
+                Navigation.PushAsync(new SignInPage());
             }
 
 

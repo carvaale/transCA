@@ -2,7 +2,10 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="transCA.Pages.SignInPage">
+    x:Class="transCA.Pages.SignInPage"
+    NavigationPage.HasNavigationBar="False"
+
+    >
 
     <StackLayout Style="{StaticResource stackStyle}">
     <Label Text="Login" Style="{StaticResource labelStyle}"/>

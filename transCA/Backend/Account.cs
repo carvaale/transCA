@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using transCA.Backend;
 namespace transCA
 {
@@ -10,6 +11,15 @@ namespace transCA
         private int _balance;
 
         public static Account CurrentUser { get; set; }
+
+
+
+        public Account(string username, string password)
+        {
+            _userName = username;
+            _password = password;
+            _balance = 0;
+        }
 
 
 
@@ -47,6 +57,19 @@ namespace transCA
         public string GetUserName()
         {
             return _userName;
+        }
+
+        public string getEmail()
+        {
+
+            return _email;
+        }
+
+        public string getPassword()
+        {
+
+            return _password;
+
         }
     }
 }
