@@ -8,7 +8,8 @@
         <Label Text="Create Booking" Style="{StaticResource bannerStyle}"/>
     </NavigationPage.TitleView>
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center">
+        <StackLayout VerticalOptions="Center"           
+            <Label Text="Sorry. It looks like you don't have enough funds in your account. Please select one of the options below." FontSize="Body" HorizontalTextAlignment="Center" Margin="60, 0"/>
             <Button Clicked="AddFunds_Clicked" Text="Add Funds" FontSize="30" FontAttributes="Bold" Margin="60, 20" Padding="0, 70"/>
             <Button Clicked="Cancel_Clicked"  Text="Cancel" FontSize="30" FontAttributes="Bold"  Margin="60, 20" Padding="0, 70"/>
         </StackLayout>

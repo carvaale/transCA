@@ -28,7 +28,6 @@
             <Style x:Key="stackStyle" TargetType="StackLayout">
                 <Setter Property="Orientation" Value="Vertical"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
-                <Setter Property="BackgroundColor" Value="LimeGreen"/>
             </Style>
 
             <Style x:Key="bannerStyle" TargetType="Label">

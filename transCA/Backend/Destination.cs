@@ -7,7 +7,7 @@ namespace transCA
     public class Destination
     {
 
-        private List<int> _destinationInfo; //[Distance, Plane price, Train Price, Bus Price]
+        private List<int> _destinationInfo; 
         public List<int> DestinationInfo { get { return _destinationInfo; } }
 
         public Destination(string province)
@@ -21,7 +21,7 @@ namespace transCA
             {
 
                 case "Yukon":
-                    _destinationInfo = new List<int> { 4000, 900, 450, 225 };
+                    _destinationInfo = new List<int> { 4000, 900, 450, 225 }; //[Distance, Plane price, Train Price, Bus Price]
                     break;
                 case "British Columbia":
                     _destinationInfo = new List<int> { 3400, 800, 400, 200 };
