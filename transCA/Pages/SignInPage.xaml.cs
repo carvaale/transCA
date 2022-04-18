@@ -11,6 +11,8 @@ namespace transCA.Pages
         public SignInPage()
         {
             InitializeComponent();
+            transCA_logo.Source = ImageSource.FromResource($"transCA.Images.transCA_logo.png", typeof(SignInPage));
+
         }
 
         void LoginButton_Clicked(System.Object sender, System.EventArgs e)

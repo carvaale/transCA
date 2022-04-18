@@ -12,10 +12,12 @@
 
   <ItemGroup>
     <None Remove="Images\qr_ticket.png" />
+    <None Remove="Images\transCA_logo.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Images\qr_ticket.png" />
+    <EmbeddedResource Include="Images\transCA_logo.png" />
   </ItemGroup>
 
   <ItemGroup>

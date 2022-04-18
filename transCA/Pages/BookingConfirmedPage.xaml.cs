@@ -24,7 +24,7 @@ namespace transCA.Pages
         
         private void Confirmation()
         {
-            Confirm.Text = $"Congratulations {Account.CurrentUser.GetUserName()}! Your trip to {_trip.ProvinceName} via {_trip.TransportWay} has been booked to arrive at {_trip.TransportationDetails.GetArrival()}. Please keep the pass below for boarding. To view this pass again click 'Current Bookings' on the Home Page.";
+            Confirm.Text = $"Congratulations! Your trip to {_trip.ProvinceName} via {_trip.TransportWay} has been booked to arrive at {_trip.TransportationDetails.GetArrival()}. Please keep the pass below for boarding. To view this pass again click 'Current Bookings' on the Home Page.";
         }
 
         private void Home_Clicked(object sender, EventArgs e)

@@ -15,6 +15,8 @@ namespace transCA
         public MainPage()
         {
             InitializeComponent();
+            transCA_logo.Source = ImageSource.FromResource($"transCA.Images.transCA_logo.png", typeof(MainPage));
+
         }
 
         private void ExistingBookingButton_Clicked(object sender, EventArgs e)

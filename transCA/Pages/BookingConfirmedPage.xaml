@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="transCA.Pages.BookingConfirmedPage"
              NavigationPage.HasNavigationBar="True"
-             NavigationPage.HasBackButton="False">
+             NavigationPage.HasBackButton="False"
+             Style="{StaticResource contentStyle}">
     <NavigationPage.TitleView>
         <Label Text="Confirmation" Style="{StaticResource bannerStyle}"/>
     </NavigationPage.TitleView>

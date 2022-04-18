@@ -5,6 +5,7 @@
     x:Class="transCA.Pages.SignUpPage"
     NavigationPage.HasNavigationBar="True"
     NavigationPage.HasBackButton="True"
+    Style="{StaticResource contentStyle}"
     >
 
     <ScrollView>
