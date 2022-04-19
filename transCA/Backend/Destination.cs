@@ -4,6 +4,8 @@ using System.Text;
 
 namespace transCA
 {
+    // Alexander Carvalho
+    // Contains info of all destinations
     public class Destination
     {
 

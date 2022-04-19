@@ -9,6 +9,8 @@ using Xamarin.Forms.Xaml;
 
 namespace transCA.Pages
 {
+    // Alexander Carvalho
+    // Dsiplays info of confirmed trip
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BookingConfirmedPage : ContentPage
     {

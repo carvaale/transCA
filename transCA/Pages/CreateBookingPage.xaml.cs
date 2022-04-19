@@ -11,6 +11,9 @@ using transCA.Pages;
 
 namespace transCA
 {
+    // Alexander Carvalho and Klajdi Hoxhalli
+    // Creates a booking with destination, transportation, and arricval time info
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CreateBookingPage : ContentPage
     {

@@ -3,13 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="transCA.Pages.InsufficientFundsPage"
              NavigationPage.HasNavigationBar="True"
-             NavigationPage.HasBackButton="False">
+             NavigationPage.HasBackButton="False"
+             Style="{StaticResource contentStyle}">
     <NavigationPage.TitleView>
         <Label Text="Create Booking" Style="{StaticResource bannerStyle}"/>
     </NavigationPage.TitleView>
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center">
-            <Label Text="Sorry. It looks like you don't have enough funds in your account. Please select one of the options below." FontSize="Body" HorizontalTextAlignment="Center" Margin="60, 0"/>
+        <StackLayout Style="{StaticResource stackStyle}">
+            <Label Text="Sorry. It looks like you don't have enough funds in your account. Please select one of the options below." FontSize="Body" HorizontalTextAlignment="Center" Margin="60, 0" TextColor="Black"/>
             <Button Clicked="AddFunds_Clicked" Text="Add Funds" FontSize="30" FontAttributes="Bold" Margin="60, 20" Padding="0, 70"/>
             <Button Clicked="Cancel_Clicked"  Text="Cancel" FontSize="30" FontAttributes="Bold"  Margin="60, 20" Padding="0, 70"/>
         </StackLayout>

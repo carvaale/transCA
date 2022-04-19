@@ -9,6 +9,8 @@ using Xamarin.Forms.Xaml;
 
 namespace transCA.Pages
 {
+    // Alexander Carvalho
+    // Dsiplays when user does not have enough money for a trip
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class InsufficientFundsPage : ContentPage
     {
