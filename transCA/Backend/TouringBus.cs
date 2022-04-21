@@ -4,6 +4,9 @@ using System.Text;
 
 namespace transCA.Backend
 {
+    // Klajdi Hoxhalli
+    // Subclass of transportation
+
     public class TouringBus : Transportation
     {
         public TouringBus(Destination destinationTouringBus, int passengersTouringBus)

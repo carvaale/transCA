@@ -4,6 +4,8 @@ using System.Text;
 
 namespace transCA.Backend
 {
+    // Klajdi Hoxhalli
+    // Contains the logic for the bookings that the user does
     public class Booking
     {
         public Destination DestinationRequired { get;  set; }

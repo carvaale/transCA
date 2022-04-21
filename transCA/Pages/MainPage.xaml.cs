@@ -10,6 +10,7 @@ using transCA.Pages;
 
 namespace transCA
 {
+ 
     public partial class MainPage : ContentPage
     {
         public MainPage()

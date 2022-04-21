@@ -9,6 +9,8 @@ using Xamarin.Forms.Xaml;
 
 namespace transCA.Pages
 {
+    // Klajdi Hoxhalli
+    // Provides the opportunity to look at the bookings that the user does and to add more bookings 
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ExistingBooking : ContentPage
     {
