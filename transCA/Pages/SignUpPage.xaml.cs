@@ -6,6 +6,8 @@ using Xamarin.Forms;
 
 namespace transCA.Pages
 {
+    //Muhammad Choudhary
+    //This page lets the user sign up
     public partial class SignUpPage : ContentPage
     {
         public SignUpPage()

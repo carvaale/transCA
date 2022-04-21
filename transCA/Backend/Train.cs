@@ -3,6 +3,7 @@ namespace transCA.Backend
 {
     public class Train : Transportation
         //Muhammad Choudhary
+        //This is that subclass for the transportation parent class
     {
 
 

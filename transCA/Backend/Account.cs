@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using transCA.Backend;
 namespace transCA
 {
+    //Principle Author: Muhammad Choudhary
+    //This is the account class that has the properties of the account
+    //It also has methods add money into a account, get the balance of an account
+    //It also has methods that retrieve the account usernames,passwords, and emails
     public class Account
     {
         private string _userName;

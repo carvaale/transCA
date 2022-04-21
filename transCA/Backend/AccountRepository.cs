@@ -3,7 +3,10 @@ using System.Collections.Generic;
 
 namespace transCA.Backend
 {
-
+    //Principle Author: Muhammad Choudhary
+    //This is static class that will keep track of all the accounts in the app
+    //It has a list which a method can add a account to and also a method to verify
+    //the creditentials of an account upon login
 
 
     public enum LoginResult

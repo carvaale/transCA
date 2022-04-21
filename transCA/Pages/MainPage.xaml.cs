@@ -13,6 +13,10 @@ namespace transCA
  
     public partial class MainPage : ContentPage
     {
+        // Klajdi Hoxhalli
+        //This is the main page which is like a main menu
+        //It allows the user to navigate to the different pages of the app for the different functionalities
+
         public MainPage()
         {
             InitializeComponent();
